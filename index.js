@@ -19,6 +19,7 @@ console.log("mongodb is connected");
 //middlewares
 app.use(express.json());
 app.use(cors());
+
 app.use("/api/user", UserRouter);
 app.use("/api/stocks", StockRouter);
 app.use("/api/invoices", InvoiceRouter);

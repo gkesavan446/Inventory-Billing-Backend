@@ -55,7 +55,7 @@ router.post("/signup", async function (request, response) {
 router.post("/login", async function (request, response) {
   try {
     const { username, password, email } = request.body;
-
+    response.header("Access-Control-Allow-Origin", "*");
     const userFromDB = await getUserByName(username);
     const userMailFromDB = await getUserByEmail(email);
     console.log(userMailFromDB);
